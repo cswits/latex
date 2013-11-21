@@ -8,7 +8,8 @@
 \newcommand{\thepapertitle}{\hfill}
 \newcommand{\theday}{\hfill}
 \newcommand{\themonth}{\hfill}
-\newcommand{\theyear}{\hfill}
+\newcommand{\themonthnumber}{\hfill}
+\newcommand{\theyear}{\the\year}
 \newcommand{\thedegrees}{\hfill}
 \newcommand{\thefaculties}{\hfill}
 \newcommand{\theinternalexaminer}{\hfill}
@@ -30,7 +31,7 @@
 \newcommand{\courseno}[1]{\renewcommand{\thecourseno}{#1}}
 \newcommand{\papertitle}[1]{\renewcommand{\thepapertitle}{#1}}
 \newcommand{\testday}[1]{\renewcommand{\theday}{#1}\renewcommand{\thetitleday}{#1}}
-\newcommand{\testmonth}[1]{\renewcommand{\themonth}{\monthname[#1]}\renewcommand{\thetitlemonth}{#1}}
+\newcommand{\testmonth}[1]{\renewcommand{\themonth}{\monthname[#1]}\renewcommand{\thetitlemonth}{#1}\renewcommand{\themonthnumber}{#1}}
 \newcommand{\testyear}[1]{\renewcommand{\theyear}{#1}\renewcommand{\thetitleyear}{#1}}
 \newcommand{\degrees}[1]{\renewcommand{\thedegrees}{#1}}
 \newcommand{\faculties}[1]{\renewcommand{\thefaculties}{#1}}

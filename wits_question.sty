@@ -17,6 +17,7 @@
 \newcommand*{\SetQuestionCounter}[2]{%
   \begingroup
   \@ifundefined{c@#1}{\newcounter{#1}\setcounter{#1}{#2}\addtocounter{totalmarks}{#2}}{\setcounter{#1}{#2}\addtocounter{totalmarks}{#2}}%
+  \@ifundefined{c@s#1}{\newcounter{s#1}\setcounter{s#1}{#2}}{\setcounter{s#1}{#2}}%
   \endgroup
 }
 \makeatother
@@ -29,6 +30,22 @@
 \newcommand*{\QuestionCounter}[1]{%
   \begingroup
   \@ifundefined{c@#1}{\newcounter{#1}}{}%
+  \endgroup
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% GET QUESTION MARKS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% GetQuestionMarks[1]
+% if( #1 exists ){
+%       Output the value of the unchanged question counter loaded from .marks
+% } else {
+%		Output ??
+% }
+\makeatletter
+\newcommand*{\GetQuestionMarks}[1]{%
+  \begingroup
+  \@ifundefined{c@squestion#1}{\textbf{??}}{\arabic{squestion#1}}%
   \endgroup
 }
 \makeatother
