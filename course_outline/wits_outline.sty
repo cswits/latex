@@ -1,0 +1,74 @@
+\usepackage[margin=72pt]{geometry}
+%\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{lastpage}
+
+\newcommand{\thecourseno}{\texttt{??}}
+\newcommand{\thecoursetitle}{\texttt{??}}
+\newcommand{\thecoursedate}{\texttt{??}}
+\newcommand{\thecoursesite}{\texttt{??}}
+
+\newcommand{\courseno}[1]{\renewcommand{\thecourseno}{#1}}
+\newcommand{\coursetitle}[1]{\renewcommand{\thecoursetitle}{#1}}
+\newcommand{\coursedate}[1]{\renewcommand{\thecoursedate}{#1}}
+\newcommand{\coursesite}[1]{\renewcommand{\thecoursesite}{#1}}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength\parindent{0pt}
+\renewcommand{\headrulewidth}{2pt}
+\setlength{\headheight}{14pt}
+
+\lhead{\thecourseno}
+%\lhead{\raisebox{-.5\height}{\includegraphics[height=24pt]{wits_logo.png}}}
+\chead{School of Computer Science}
+\rhead{Course Outline}
+\cfoot{\scriptsize This course outline is subject to change. Changes, if any, will be announced in class. Students will be held responsible for all changes. \\ Page \thepage\ of \pageref{LastPage}}
+
+\fancypagestyle{firststyle}
+{
+   \renewcommand{\headrulewidth}{0pt}
+   \fancyhf{}
+   \fancyfoot[C]{\scriptsize This course outline is subject to change. Changes, if any, will be announced in class. Students will be held responsible for all changes. \\ Page \thepage\ of \pageref{LastPage}}
+}
+
+\newcommand{\courseHead}{
+  \thispagestyle{firststyle}
+\vspace*{-2cm}
+\begin{center}
+\noindent\begin{minipage}[c]{0.12\linewidth}
+  \includegraphics[width=\linewidth]{Crest.pdf}
+\end{minipage}\begin{minipage}[c]{0.88\linewidth}
+    {\large \sc University of the Witwatersrand} \\  
+    \rule[10pt]{\linewidth}{0.5pt}\\[-10pt]
+    \textbf{\large School of Computer Science}
+\end{minipage}
+{     \bf \LARGE
+      \thecoursetitle \\
+      \thecourseno    \\[20pt]
+}
+        Course Outline \\
+      \thecoursedate  \\
+      \thecoursesite  \\
+
+      \rule{\linewidth}{0.5pt}
+\end{center}
+}
+
+\newcommand{\suggestSections}{
+  \section{Instructors}
+  \section{Course Description}
+  \section{Course Objectives}
+  \section{Pre-requisites}
+  \section{References}
+  \section{Syllabus}
+  \section{Times and Venues}
+  \section{Grading Policy}
+  \section{Group Work and Plagiarism}
+
+}
+
+\newcommand{\courseOutline}{\courseHead}
